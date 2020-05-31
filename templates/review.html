@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="all" href="{% static "mainpage/css/style.css" %}" type="text/css">
+        <link rel="shortcut icon" href="{% static "mainpage/img/icon.ico" %}" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+2|Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script|Roboto&display=swap" rel="stylesheet">
+        <title>Все блюда</title>
+    </head>
+<body>
+
+   <header class="header">
+
+        <h1 class="name">Levas Baker</h1>
+        <div class="menu">
+            <img src="{% static "mainpage/img/cake.png" %}" alt="" class="cake">
+            <a href="{% url 'main' %}" class="but-menu">Главная</a>
+            <img src="{% static "mainpage/img/cake.png" %}" alt="" class="cake">
+            <a href="{% url 'about' %}" class="but-menu">О нас</a>
+            <img src="{% static "mainpage/img/cake.png" %}" alt="" class="cake">
+            <a href="{% url 'index' %}" class="but-menu">Продукция</a>
+            <img src="{% static "mainpage/img/cake.png" %}" alt="" class="cake">
+            <a href="#" class="but-menu">Контакты</a>
+
+        </div>
+
+        <h1 class="love">Сделано с любовью</h1>
+        <img src="{% static "mainpage/img/logo.png" %}" alt="" class="imglogo">
+        <div class="regestracia">
+            <a href="{% url 'register' %}" class="reg">Зарегестрироваться</a>
+            <a href="{% url 'login' %}" class="reg">Войти</a>
+            <a href="{% url 'logout' %}" class="reg">Выйти</a>
+        </div>
+    </header>
+
+    <div class="i">
+        <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"> <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im1"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im3"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"> <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im1"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im3"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"> <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im1"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im3"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"> <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im1"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im3"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"> <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im1"><br><br><br><br><br><br>
+    </div>
+    <div class="i2">
+        <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im2"> <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im22"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im2"> <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im22"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im2"> <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im22"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im2"> <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h5.png" %}" alt="" class="im22"><br><br><br><br><br><br>
+        <img src="{% static "mainpage/img/h3.png" %}" alt="" class="im2"> <img src="{% static "mainpage/img/icon.ico" %}" alt="" class="im"><br><br><br><br><br><br>
+
+    </div>
+
+
+{% if reviews %}
+{% for review in reviews %}
+    <div class="post">
+
+        <div class="post-text">
+
+            <h2 class="post-title">{{ review.name_review }}</h2>
+            <span class='pubdate'>{{ review.date_review }}</span>
+
+            <blockquote><h4 class="p">
+                {{ review.review }}
+            </h4></blockquote>
+
+        </div>
+    </div>
+{% endfor %}
+
+{% else %}
+    <div class="ml-3">Комментарий не найдены! Станьте первым.</div>
+{% endif %}
+
+<form action="" method="POST" class="com">
+
+	{% csrf_token %}
+
+	<div class="div2 ml-3"><input type="text" required="" placeholder="Ваше имя" name="name"></div>
+	<div class="div ml-3"><textarea name="text" required="" placeholder="Текст комментария" cols="50" rows="6"></textarea></div><br>
+
+	<div class="div5 ml-3"><button type="submit" class="btn btn-primary">Оставить комментарий</button></div>
+</form>
+
+
+<footer class="footer">
+    <h2 class="our">Мы в соц. сетях:</h2>
+    <div class="cont">
+        <a href="https://api.whatsapp.com/send?phone=996559595139"><img
+                src="https://img.icons8.com/color/48/000000/whatsapp.png" class="social"></a>
+        <a href="https://t.me/lolhkol"><img src="https://img.icons8.com/color/48/000000/telegram-app.png"
+                class="social"></a>
+        <a href="https://instagram.com/__bmw__lifellove__?igshid=1pbnqrb22upmu"><img
+                src="https://img.icons8.com/officel/48/000000/instagram-new.png" class="social"></a>
+    </div>
+    <span>Baker.kg © 2018. Все права защищены.</span>
+</footer>
+
+</body>
+</html>

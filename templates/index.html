@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+{% for food in page_obj %}
+    <div class="post">
+
+        <img src="{{ food.image.url }}" alt="" class="post_img">
+        <div class="post-text">
+            <h2 class="post-title">{{ food.name }}</h2>
+            <span class='pubdate'>{{ food.pub_date }}</span>
+
+            <blockquote><h4 class="p">
+                {{ food.description|truncatechars:"100" }}
+            </h4></blockquote>
+            <blockquote><h4 class="p">
+                {{ food.composition|truncatechars:"100" }}
+            </h4></blockquote>
+            <span class="float-right"><a href="../food_detail/{{food.id}}">Посмотреть полностью</a></span>
+        </div>
+    </div>
+{% endfor %}
+
+
+<div class="next-prev">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1" class="new">Первая</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="new">Предыдущая</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="new">следущая</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="new">последняя</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}

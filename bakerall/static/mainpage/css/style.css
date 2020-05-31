@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Baloo 2', cursive; */
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+header{
+height: 1000px;
+background: url("../img/75837-obledenenie-keks-purpur-konditerskie_izdeliya-krem-1920x1080.jpg") no-repeat ;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+.com{
+    margin-left: 35%;
+}
+.menu{
+    display: flex;
+    margin-left: 28%;
+    margin-top: 50px;
+    width: 760px;
+}
+.name{
+    padding-top: 20px;
+    height: 60px;
+    margin-left: 45%;
+    width: 180px;
+    font-family: 'Bad Script', cursive;
+    color: #ffffcc;
+    opacity: 0.8;
+}
+.but-menu{
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+    font-size: 30px;
+}
+.but-menu:hover{
+    color: #6699ff
+}
+.cake{
+    width: 40px;
+    height: 40px;
+}
+
+.love{
+    font-family: 'Bad Script', cursive;
+    color: #ffffcc;
+    font-size: 50px;
+    margin-top: 300px;
+    margin-left: 40%;
+    opacity: 0.7;
+}
+.imglogo{
+    width: 100px;
+    height: 100px;
+    margin-left: 47%;
+}
+.catalog{
+    opacity: 1;
+    background-image: url(../img/s3_4_12.jpg) ;
+    width: 900px;
+    height: 350px;
+    transition: opacity 724ms linear, transform 724ms linear;
+    padding-top: 23%;
+    display: block;
+}
+.cat{
+    background: black;
+    margin-top: 70px;
+    width: 900px;
+    margin-left: 25%;
+    overflow: hidden;
+}
+.catalog:hover{
+    opacity: 0.5;
+    transform: scale(1.03);
+}
+
+h4.text{
+    margin-top: 20px;
+    color: black;
+    width: 900px;
+    margin-left: 25%;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1.title{
+    color: #ff6681;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+ a.button{
+     text-decoration: none;
+     font-size: 30px;
+     padding: 40px;
+     padding-bottom: -40%;
+     color: rgb(185, 19, 177);
+     background-color: white;
+     transition: color violet 724ms linear;
+ }
+
+ a.button.secondaryAction{
+     text-decoration: none;
+     font-size: 15px;
+     padding: 5px;
+     color: rgb(185, 19, 177);
+     background-color: white;
+     transition: color violet 724ms linear;
+ }
+
+ a.button:hover{
+     background-color: violet;
+     border-radius: 0 10px 10px 0;
+     border-bottom: solid silver 2px;
+     border-top: solid silver 2px;
+     border-right: solid silver 2px;
+     color: gray;
+ }
+ .hi{
+     display: flex;
+     margin-left: 37%;
+     margin-top: 60px;
+ }
+ .hi1{
+    display: flex;
+    margin-left: 44%;
+    margin-top: 60px;
+}
+ .hey{
+     width: 40px;
+     height: 40px;
+ }
+
+ footer.footer{
+     background-color: rgb(255, 0, 191);
+     height: 190px;
+     margin-top: 50px;
+ }
+
+ .our{
+     margin-left: 42%;
+     padding-top: 30px;
+     padding-bottom: 15px;
+     width: 190px;
+ }
+ .cont{
+
+     margin-left: 39%;
+     padding-bottom: 30px;
+     width: 300px;
+ }
+ .social{
+     margin-left: 33px;
+ }
+ span{
+     margin-left: 39%;
+ }
+
+ .i{
+    position: absolute;
+    margin-left: 20px;
+ }
+ .i2{
+    float: right;
+    margin-right: 20px;
+ }
+ .im1{
+     margin-left: 100px;
+ }
+ .im2{
+     margin-right: 100px;
+ }
+ .im3{
+     margin-left: 120px;
+ }
+ .im22{
+     margin-left: 110px;
+ }
+ .regestracia{
+     margin-left: 33%;
+     margin-top: 50px;
+ }
+ .reg{
+     text-decoration: none;
+     font-size: 25px;
+     margin-left: 30px;
+     padding: 10px;
+     border-radius: 10px;
+     background: linear-gradient(to bottom right, rgb(169, 24, 206), rgba(223, 106, 106, 0.623));
+     border: solid 2px silver;
+ }
+ .reg:hover{
+    background: linear-gradient(to bottom right, rgba(223, 106, 106, 0.623), rgb(169, 24, 206));
+ }
+
+ .post{
+     width: 600px;
+     margin-left: 33%;
+     margin-top: 50px;
+     display: flex;
+ }
+
+ .foood{
+     width: 172px;
+     height: 172px;
+ }
+
+ .post-text{
+     margin-left: 15px;
+     width: 413px;
+ }
+ .step-links{
+     display: flex;
+     margin-left: 33%;
+     margin-top: 30px;
+     padding-left: -100px;
+ }
+ .current{
+     margin:0 10px 0 10px;
+     padding: 0;
+ }
+
+ .new{
+     font-size: 20px;
+     width: auto;
+     margin-left: 10px;
+     color: rgb(144, 17, 148);
+     font-weight: bolder;
+ }
+ .new:hover{
+     color: rgb(34, 26, 151);
+ }
+
+ .about-us{
+     color: rgb(216, 17, 223);
+     font-weight: bold;
+     font-size: 30px;
+     margin-top: 40px;
+     margin-left: 45%;
+ }
+
+ .r{
+     margin-top: 50px;
+ }
+ .review{
+     margin-left: 40%;
+     height: 30px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 25px;
+     color: crimson;
+ }
+ a.review:hover{
+     color: rgba(52, 76, 211, 0.897);
+ }

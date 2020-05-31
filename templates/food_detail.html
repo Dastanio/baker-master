@@ -1,0 +1,23 @@
+{% extends 'index.html'%}
+{% block content %}
+
+
+    <div class="post">
+        
+        <div class="post-text">
+            <img src="{{ eda.image.url }}" alt="" class="post_img">
+
+            <h2 class="post-title">{{ eda.name }}</h2>
+            <span class='pubdate'>{{ eda.pub_date }}</span>
+
+            <blockquote><h4 class="p">
+                {{ eda.description }}
+            </h4></blockquote>
+            <blockquote><h4 class="p">
+                {{ eda.composition }}
+            </h4></blockquote>
+            {{eda.Rating}}
+        </div>
+    </div>
+
+{% endblock%}
